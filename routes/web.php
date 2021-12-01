@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RecetaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +23,13 @@ Route::resource('recipes', RecetaController::class); // Forma de crear rutas má
 
 Route::view('about', 'about')->name('about'); // view se utiliza para generar una vista sin usar la DB
 
+Route::get('contact', [ContactController::class, 'index'])->name('contact.index'); // toma la función index de ContactoController
+ 
+Route::post('contact', [ContactController::class, 'store'])->name('contact.store'); // toma la función store de ContactoController
 
 
 /* 
-/// Crear rutas de a una: ///
+/// Crear rutas de a una: (lo suplanté con ::resources) ///
 Route::get('recipes', [RecetaController::class, 'index'])->name('recipes.index');
 
 Route::get('recipes/create', [RecetaController::class, 'create'])->name('recipes.create');
