@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     {{-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">  // Link a tailwind--}}
-    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/assets/logo.png">
     <!-- fonts -->
+    <link href="css/styles.css" rel="stylesheet">
+ 
 </head>
 <body>
+
+
 
     <!-- header -->
     <!-- nav -->
@@ -21,5 +25,6 @@
     
     <!-- footer -->
     <!-- script -->
+    
 </body>
 </html>

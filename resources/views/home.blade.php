@@ -1,6 +1,10 @@
 @extends('layouts.plantilla')
 
-@section('title', 'Recipes website')
+@Push('styles')
+    <link href="{{ asset('assets/css/home.css') }}" rel="stylesheet">
+@endpush
+
+@section('title', 'Recipes World!')
 
 @section('content')
     <h1>Hello Recipes World!</h1>

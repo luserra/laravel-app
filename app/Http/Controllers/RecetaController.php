@@ -9,6 +9,7 @@ class RecetaController extends Controller
 {
     public function index(){
 
+      
         $recipe = Recipe::orderBy('id', 'desc')->paginate();
         /* return($recipe); */
 
@@ -39,6 +40,8 @@ class RecetaController extends Controller
     public function show($id){ 
 
         $recipe = Recipe::find($id);
+        
+
         return view('recipe.show', compact('recipe'));
     }
     
